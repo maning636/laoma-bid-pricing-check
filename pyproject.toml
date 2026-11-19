@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bidmaster-pricing-check"
+version = "0.1.0"
+description = "投标报价算术核查技能：最高限价 / 大小写金额 / 单价×数量=合价 / 安全区间，纯规则不调大模型"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
+authors = [{ name = "老马标书贤内助" }]
+keywords = [
+  "招投标", "标书", "投标", "报价核查", "清标", "废标预防",
+  "bidding", "tender", "bid-check", "pricing", "skill",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+]
+
+# 零第三方运行时依赖：只用标准库 re / asyncio / dataclasses。
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/maning636/bidmaster-pricing-check"
+
+[tool.setuptools]
+packages = ["skill_engine", "skills", "skills.pricing_check"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 120
