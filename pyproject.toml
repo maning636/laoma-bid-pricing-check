@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "bidmaster-pricing-check"
+name = "laoma-bid-pricing-check"
 version = "0.1.0"
 description = "投标报价算术核查技能：最高限价 / 大小写金额 / 单价×数量=合价 / 安全区间，纯规则不调大模型"
 readme = "README.md"
@@ -30,7 +30,7 @@ dependencies = []
 dev = ["pytest>=7.0"]
 
 [project.urls]
-Homepage = "https://github.com/maning636/bidmaster-pricing-check"
+Homepage = "https://github.com/maning636/laoma-bid-pricing-check"
 
 [tool.setuptools]
 packages = ["skill_engine", "skills", "skills.pricing_check"]

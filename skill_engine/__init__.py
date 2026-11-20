@@ -7,7 +7,7 @@
 - ``SkillResult``  ：执行结果（success / data / error / warnings）
 
 刻意**不**包含 ``SkillRegistry`` 与 ``SkillLoader``：本仓库只有一个技能，
-不需要磁盘发现与进程内注册表。需要完整引擎的，见主仓或 ``bidmaster-skills``。
+不需要磁盘发现与进程内注册表。需要完整引擎的，见主仓或 ``laoma-bid-skills``。
 """
 
 from __future__ import annotations

@@ -8,8 +8,8 @@
 
 | 项 | 状态 |
 |---|---|
-| 代码仓库 | ✅ 已建：`D:/dim开发/bidmaster-skills-pricing` |
-| GitHub 公开库 | ✅ 已推：https://github.com/maning636/bidmaster-pricing-check |
+| 代码仓库 | ✅ 已建：`D:/dim开发/laoma-bid-skills-pricing` |
+| GitHub 公开库 | ✅ 已推：https://github.com/maning636/laoma-bid-pricing-check |
 | 可见性 | **Public**（当前） |
 | 测试 | ✅ 22 条全绿 |
 | 从 GitHub 安装 | ✅ 实测通过（`pip install git+https://...`） |
@@ -46,7 +46,7 @@
 ```bash
 cd /tmp && rm -rf _verify && mkdir _verify && cd _verify
 "D:/dim开发/_bidmaster/.venv/Scripts/python.exe" -m pip install --no-deps --target ./site \
-  "git+https://github.com/maning636/bidmaster-pricing-check.git"
+  "git+https://github.com/maning636/laoma-bid-pricing-check.git"
 PYTHONPATH=./site "D:/dim开发/_bidmaster/.venv/Scripts/python.exe" -c "
 import asyncio
 from skill_engine import SkillContext
@@ -58,7 +58,7 @@ print('risk:', r.data['risk_level'])   # 期望 high（超限价）
 "
 ```
 
-浏览器打开 https://github.com/maning636/bidmaster-pricing-check 确认 README 渲染正常。
+浏览器打开 https://github.com/maning636/laoma-bid-pricing-check 确认 README 渲染正常。
 
 ### P1 · 补 GitHub 仓库元信息（1 小时）
 
@@ -97,7 +97,7 @@ jobs:
 现在只能 `pip install git+https://...`，不够友好。推到 PyPI 后：
 
 ```bash
-pip install bidmaster-pricing-check
+pip install laoma-bid-pricing-check
 ```
 
 步骤：
@@ -106,7 +106,7 @@ pip install bidmaster-pricing-check
 3. `twine upload dist/*`（需 PyPI 账号 + API token，**要用户提供**）
 4. 先发 TestPyPI 验证：`twine upload --repository testpypi dist/*`
 
-**注意**：包名 `bidmaster-pricing-check` 在 PyPI 上可能已被占，先查 https://pypi.org/project/bidmaster-pricing-check/
+**注意**：包名 `laoma-bid-pricing-check` 在 PyPI 上可能已被占，先查 https://pypi.org/project/laoma-bid-pricing-check/
 
 ### P3 · 内容分发（1–2 天，看用户意愿）
 
@@ -159,7 +159,7 @@ pip install bidmaster-pricing-check
 
 做完 P0–P1 后应达到：
 
-- [ ] `pip install git+https://github.com/maning636/bidmaster-pricing-check.git` 成功
+- [ ] `pip install git+https://github.com/maning636/laoma-bid-pricing-check.git` 成功
 - [ ] GitHub 页面 Topics ≥ 6 个、About 描述已填
 - [ ] Release `v0.1.0` 已发布
 - [ ] CI 徽章显示 passing
@@ -171,6 +171,6 @@ pip install bidmaster-pricing-check
 ## 8. 参考
 
 - 主仓：`D:/dim开发/_bidmaster`
-- 完整技能集（8 个）：`D:/dim开发/bidmaster-skills`（另一个私有库）
+- 完整技能集（8 个）：`D:/dim开发/laoma-bid-skills`（另一个私有库）
 - 本仓库设计说明：`README.md`
 - 上游归属：`NOTICE`

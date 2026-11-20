@@ -1,4 +1,4 @@
-# bidmaster-pricing-check
+# laoma-bid-pricing-check
 
 **投标报价算术核查** —— 一个技能，一个职责：把报价表里那些「人工核必漏」的算术错误查出来。
 
@@ -35,7 +35,7 @@
 ## 安装
 
 ```bash
-pip install git+https://github.com/maning636/bidmaster-pricing-check.git
+pip install git+https://github.com/maning636/laoma-bid-pricing-check.git
 ```
 
 本技能**零运行时依赖**（只用标准库），安装很快。
